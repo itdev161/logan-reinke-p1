@@ -8,14 +8,17 @@ router.get('/', function(req, res, next) {
     {
       "id": "1",
       "username": "CaydeHunter",
+      "password": "123456",
     },
     {
       "id": "2",
       "username": "ZavalaTitan",
+      "password": "654321",
     },
     {
       "id": "3",
       "username": "IkoraWarlock",
+      "password": "password",
     },
   ])
 });
