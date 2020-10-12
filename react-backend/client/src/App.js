@@ -92,7 +92,17 @@ const App = () => {
           </Typography>
         </Grid>
         <>
-          {error ? <Typography classes={{root: classes.error}}>Incorrect username or password.</Typography> : null}
+          {error 
+            ? <Grid item>
+                <Typography 
+                  classes={{
+                    root: classes.error
+                  }}
+                >
+                  Incorrect username or password.<br/> Please try again!
+                </Typography>
+              </Grid>
+            : null}
         </>
           {loading
           ? <Grid item>
@@ -122,11 +132,17 @@ const App = () => {
     }
     </div>
     </div>
-      {users && users.map((user) => {
-        return(
-          <p>{user.username}: {user.id}, {user.password}</p>
-        );
-      })}
+    {error && <Typography>
+        Hint:<br/>
+        "username": "CaydeHunter",
+        "password": "123456",
+        <br/>
+        "username": "ZavalaTitan",
+        "password": "654321",
+        <br/>
+        "username": "IkoraWarlock",
+        "password": "password",
+      </Typography>}
     </div>
   );
 }
