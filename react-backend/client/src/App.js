@@ -56,7 +56,7 @@ const App = () => {
     setLoading(true);
     axios.get(`/users`)
       .then((response) => {
-        let userFound = (response?.data.filter((user) => user?.username === username && user?.password === password
+        let userFound = await (response?.data.filter((user) => user?.username === username && user?.password === password
         ))
         if (userFound.length > 0){
           console.log({response})
